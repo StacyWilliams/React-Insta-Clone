@@ -7,6 +7,7 @@ const addComent = props => {
       <form onSubmit={event => props.addNewComment(event, props.id)}>
         <input
           className="search"
+          name='newComment'
           onChange={props.onChange}
           value={props.value}
           type="text"

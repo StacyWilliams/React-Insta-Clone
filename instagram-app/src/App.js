@@ -11,38 +11,29 @@ class App extends React.Component {
  constructor(props) {
  super(props);
    this.state = {
-     data: dummyData,
+     data: [],
      newComment: ''
  };
 }
 
 componentDidMount() {
-  this.setState(
-    {
-      data: this.state.data.concat(
-        dummyData.map(datum => {
-          datum.id = uuid();
-          return datum;
-        })
-      )
-    }
-  )
-  }
+  this.setState({ data: dummyData })}
 
 searchItems = (event) => {
   if (event .target.value !== '') {
-    const enteredValue = event.target.value;
+    const enteredValue = event.target.value
     return enteredValue;
   }
 }
 
   onChange = event => {
       this.setState({
-      newComment: event.target.value
+     [event.target.name]: event.target.value,
+      newComment: 'newComment'
     });
   };
 
-  addNewComment = (event, index) => {
+  addNewComment = (event) => {
     event.preventDefault();
     if (this.state.newComment === "") {
       alert("Enter a comment");
@@ -52,14 +43,9 @@ searchItems = (event) => {
       text: this.state.newComment
     };
 
-    let data = Object.assign([], this.state.data);
+    
 
-    data = data.map(comm => {
-      if (comm.id === index) {
-        comm.comments.push(newCommentDetails);
-      }
-      return comm;
-    });
+    
   }
 
 
@@ -68,7 +54,7 @@ render() {
     <div className="App">
       <SearchBar onchangeValue={this.searchItems}/>
      
-        {dummyData.map(data => {
+        {this.state.data.map(data => {
           return <div><PostContainer key={uuid()} data={data} id={uuid()}/></div>
       })}
      </div>
