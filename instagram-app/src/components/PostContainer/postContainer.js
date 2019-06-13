@@ -4,7 +4,27 @@ import uuid from "uuid";
 import "./postContainer.css";
 import CommentSection from "../CommentSection/commentSection";
 import AddComment from "../AddComment/addComment";
+import styled from 'styled-components'
 
+
+const Horizontal = styled.div`
+border-bottom: 1px solid rgb(180, 179, 179);
+margin: 0 1rem;
+`;
+
+const PostContainerDiv = styled.div`
+width: 70%;
+box-shadow: 1px 1px 1px 1px rgb(180, 179, 179);
+text-align: left;
+box-sizing: border-box;
+margin: 2rem 1rem;
+padding-top: .5rem;
+`;
+
+const userContainer = styled.div`
+  padding-left: 1rem;
+  display: flex;
+`;
 
 class PostContainer extends React.Component {
   constructor(props) {
@@ -61,11 +81,11 @@ increaseLike = () => {
 
 
     return (
-        <div className="postContainer">
-         <div className="user-container">
+        <PostContainerDiv>
+         <userContainer>
            <img src={thumbnailUrl} alt="profile" />
             <p>{username}</p>
-        </div>
+        </userContainer>
 
         <img className="main_image" src={imageUrl} alt="banner" />
       
@@ -77,16 +97,16 @@ increaseLike = () => {
                 return <CommentSection key={uuid()} comment={comment} />;
       })}
 
-          <p className="timestamp">{timestamp}</p>
-            <div className="horizontal" />
+          <p >{timestamp}</p>
+            <Horizontal>
                <AddComment
                  addNewComment={this.addNewComment}
                  id={this.props.id}
                  onChange={this.onChange}
                  value={this.state.newComment}
                  />
-        </div>
-     
+            </Horizontal>
+       </PostContainerDiv>
   );
 };
 }

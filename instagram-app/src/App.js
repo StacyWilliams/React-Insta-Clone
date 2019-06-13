@@ -1,10 +1,17 @@
 import React from 'react';
 import dummyData from './dummy-data';
 import './App.css';
-import ComponentFromWithAuthenticate from './components/authentication/withAuthenticate';
+import styled from 'styled-components'
 import PostsPage from "./components/PostContainer/postsPage";
 
-
+const AppStyle = styled.div`
+width: 900px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+`;
 
 class App extends React.Component {
  constructor(props) {
@@ -47,11 +54,11 @@ searchItems = (event) => {
 
 render() {
   return (
-    <div className="App">
+    <AppStyle>
       
-       <ComponentFromWithAuthenticate {...this.state.data}/>
+       <PostsPage {...this.state.data}/>
        
-     </div>
+       </AppStyle>
   );
   }
 }

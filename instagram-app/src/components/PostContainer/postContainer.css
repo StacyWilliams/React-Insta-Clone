@@ -1,22 +1,22 @@
-.postContainer{
+/* .postContainer{
     width: 70%;
     box-shadow: 1px 1px 1px 1px rgb(180, 179, 179);
     text-align: left;
     box-sizing: border-box;
     margin: 2rem 1rem;
     padding-top: .5rem;
-}
+} */
 
-.postContainer > p, .postContainer > i{
+/* .postContainer > p, .postContainer > i{
     padding-left: 1rem;
 }
 .postContainer > i{
     font-size: 1.5rem;
-}
-.user-container{
+} */
+/* .user-container{
     padding-left: 1rem;
     display: flex;
-}
+} */
 
 .user-container > img{
     width: 50px;
@@ -28,9 +28,7 @@
 .user-container > p{
     font-weight: bold;
 }
-.timestamp{
-    color: grey;
-}
+
 
 .main_image{
     width: 100%;
@@ -43,10 +41,10 @@
     margin: .5rem 0;
 }
 
-.horizontal{
+/* .horizontal{
     border-bottom: 1px solid rgb(180, 179, 179);
     margin: 0 1rem;
-}
+} */
 
 .comment-bottom{
     display: flex;

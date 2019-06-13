@@ -1,4 +1,4 @@
-.searchBar{
+/* .searchBar{
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -6,7 +6,7 @@
     border-bottom: 1px solid rgb(165, 164, 164);
     margin-bottom: 1rem;
     font-family: 'Satisfy', cursive;
-}
+} */
 
 .searchBar span{
     font-weight: bold;
@@ -17,12 +17,12 @@
     font-size: 1.6rem;
 }
 
-.vertical{
-    border-left: 1px solid rgb(165, 164, 164);
-}
-.search-div{
+/* .vertical{
+    border-left: 1px solid rgb(165, 164, 164); */
+/* } */
+/* .search-div{
     width: 60%;
-}
+} */
 .search{
     text-align: center;
     font-size: 1rem;

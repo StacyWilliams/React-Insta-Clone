@@ -1,9 +1,11 @@
 import React from "react";
 import "./addComment.css";
 
+
+
 const addComent = props => {
   return (
-    <div className="add-comment">
+    
       <form onSubmit={event => props.addNewComment(event, props.id)}>
         <input
           className="search"
@@ -15,7 +17,7 @@ const addComent = props => {
         />
         <button type="submit">Add</button>
       </form>
-    </div>
+  
   );
 };
 

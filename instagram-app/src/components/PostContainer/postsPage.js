@@ -3,6 +3,17 @@ import uuid from 'uuid';
 import dummyData from "../../dummy-data";
 import SearchBar from "../SearchBar/searchBar";
 import PostContainer from './postContainer';
+import styled from 'styled-components'
+
+
+const AppStyle = styled.div`
+width: 900px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+`;
 
 
 class PostsPage extends React.Component {
@@ -43,13 +54,13 @@ class PostsPage extends React.Component {
    
    render() {
      return (
-       <div className="App">
+       <AppStyle>
          <SearchBar onchangeValue={this.searchItems}/>
           {this.state.data.map(data => {
              return <div><PostContainer key={uuid()} data={data} id={uuid()}/></div>
         
         })}
-        </div>
+        </AppStyle>
      );
      }
    }
