@@ -6,7 +6,7 @@ const CommentSection = (props) => {
     const {comment} = props; 
     
     return (
-        <div><Comment comment={comment}/></div>
+        <div><Comment comment={comment} /></div>
     )
 }
 

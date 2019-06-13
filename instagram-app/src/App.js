@@ -1,9 +1,8 @@
 import React from 'react';
-import uuid from 'uuid';
 import dummyData from './dummy-data';
-import SearchBar from "./components/SearchBar/searchBar";
 import './App.css';
-import PostContainer from './components/PostContainer/postContainer';
+import ComponentFromWithAuthenticate from './components/authentication/withAuthenticate';
+import PostsPage from "./components/PostContainer/postsPage";
 
 
 
@@ -38,10 +37,7 @@ searchItems = (event) => {
     if (this.state.newComment === "") {
       alert("Enter a comment");
     }
-    const newCommentDetails = {
-      username: "User's Name",
-      text: this.state.newComment
-    };
+    
 
     
 
@@ -52,11 +48,9 @@ searchItems = (event) => {
 render() {
   return (
     <div className="App">
-      <SearchBar onchangeValue={this.searchItems}/>
-     
-        {this.state.data.map(data => {
-          return <div><PostContainer key={uuid()} data={data} id={uuid()}/></div>
-      })}
+      
+       <ComponentFromWithAuthenticate {...this.state.data}/>
+       
      </div>
   );
   }
