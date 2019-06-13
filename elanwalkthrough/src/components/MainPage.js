@@ -11,6 +11,11 @@ class MainPage extends React.Component {
        }
    }
 
+   componentDidMount(){
+    this.setState({
+        posts: dummyData
+    })
+}
 
    render(){
        return(

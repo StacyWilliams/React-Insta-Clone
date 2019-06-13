@@ -31,3 +31,106 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Maps Start */
+.firstMap {
+  /* border: 1px solid red; */
+  margin-bottom: 25px;
+  border-radius: 5px;
+  box-shadow: 5px 10px 18px black;
+}
+
+.secondMap {
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+}
+
+.secondMap h3 {
+  margin-right: 10px
+}
+
+/* Maps End */
+
+
+.user {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid green; */
+  padding-left: 10px
+}
+
+.profilePic {
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.postPic {
+  width: 100%;
+  max-height: 600px;
+}
+
+.likes {
+  user-select: none;
+  display: flex;
+  margin: 10px 20px;
+}
+
+.comments {
+  margin: 0 20px;
+  border-color: 2px solid black;
+}
+
+.commentInput {
+  width: 100%;
+  margin: 20px 0;
+  border: none;
+  height: 40px;
+  
+}
+
+.bottomBorder {
+  border-bottom: 1px solid gray
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0
+}
+
+.searchBarRight{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 20%;
+
+}
+.IGText {
+  max-height: 35px;
+  margin-left: 25px
+}
+
+.logoSVG {
+  padding-right: 25px;
+  border-right: 1px solid gray
+}
+
+.searchInput {
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid gray
+}
+
+.notClicked {
+  margin-right: 20px
+}
+
+.clicked {
+  fill: red;
+  filter: red
+}

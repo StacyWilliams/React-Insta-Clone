@@ -1,61 +1,60 @@
-import React from 'react';
-
-
+import React from 'react'
 
 class Comments extends React.Component {
     constructor(props) {
-        super(props);
-        this.state= {
-            comments: props.commentProps,
-            typedComment: ''
+        super(props); 
+        this.state = {
+            comments: props.commentsProps,
+            typedComment: '',
         }
     }
-    
-    
-// handleChange = e => {
-//     console.log(this.state.typedComment)
-//     this.setState({
-//         [e.target.name]: e.target.value,
-//     })
-// }
 
-// newComment = e => {
-//    e.preventDefault()
+    handleChange = e => {
+        console.log(this.state.typedComment)
+        this.setState({
+            [e.target.name]: e.target.value,
+        })
+    }
 
-//    const newObj = {
-//        id: Date.now(),
-//        username: 'Savage',
-//        text: this.state.typedComment
-//    }
+    floatingProp = e => {
+        e.preventDefault()
 
-//    this.setState({
-//        comments: [...this.state.comments, newObj]
-//    })
-// }
+        const newObj = {
+            id: Date.now(),
+            username: 'Savage',
+            text: this.state.typedComment
+        }
+        
+        this.setState({
+            comments: [...this.state.comments, newObj]
+        })
+    }
 
     render() {
         console.log({COMMENTS: this.state.comments})
         return (
-            <div>
-              {this.state.comments.map(eachCommentObj => (
-                   <div key={eachCommentObj.id}>
-                       <h3>{eachCommentObj.username}</h3>
-                       <p>{eachCommentObj.text}</p>
-                   </div>
-               ))}
+            <div className='comments'>
+                <div className='bottomBorder'>
+                {this.state.comments.map(eachCommentObj => (
+                    <div className='secondMap' key={eachCommentObj.id}>
+                        <h3>{eachCommentObj.username}</h3>
+                        <p>{eachCommentObj.text}</p>
+                    </div>
+                ))}
+                </div>
 
-              <form onSubmit={this.newComment}>
-                  <input 
-                  placeholder='comments'
-                  onChange={this.handleChange}
-                  value={this.state.typedComment}
+                <form className='commentsForm' onSubmit={this.floatingProp}>
+                    <input 
+                      className='commentInput'
+                      placeholder='Add a Comment'
+                      onChange={this.handleChange}
+                      value={this.state.typedComment}
+                      name='typedComment'
                     />
-              </form>
-
+                </form>
             </div>
         )
     }
-   
 }
 
-export default Comments;
+export default Comments
