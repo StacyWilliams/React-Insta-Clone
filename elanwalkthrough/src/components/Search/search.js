@@ -13,12 +13,15 @@ const Search = props => {
                 <input
                   placeholder='Search...'
                   className='searchInput'
+                  value={props.value}
+                  name='search'
+                  onChange={props.filter}
                 />
             </form>
             <div className='searchBarRight'>
-            <i class="far fa-compass"></i>
-            <i class="far fa-heart"></i>
-            <i class="far fa-user"></i>
+            <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-user"></i>
             </div>
            
 

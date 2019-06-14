@@ -12,6 +12,10 @@ const Search = styled.div`
     padding: 10px 0
   
   `;
+  const RightIcons = styled.div`
+  padding-left: 1rem;
+  color: rgb(48, 48, 48);
+  `;
 
   const VerticalDiv = styled.div`
     border-left: 1px solid rgb(165, 164, 164);
@@ -19,6 +23,10 @@ const Search = styled.div`
 
     const SearchDiv = styled.div`
       width: 60%;
+  `;
+  const RightIconsDiv = styled.div`
+     padding-left: 1rem;
+    color: rgb(48, 48, 48);
   `;
 
 const searchBar = props => {
@@ -40,11 +48,11 @@ const searchBar = props => {
           placeholder="Search"
         />
         </SearchDiv>
-      <div className="right-icons">
+      <RightIconsDiv>
         <i className="far fa-compass" />
         <i className="far fa-heart" />
         <i className="far fa-user" />
-      </div>
+      </RightIconsDiv>
     </Search>
   );
 };
