@@ -22,10 +22,10 @@ class PostContainer extends React.Component {
     newComment: event.target.value
   });
 };
-addNewComment = (event, idx) => {
+addNewComment = (event) => {
   event.preventDefault();
   const newCommentDetails = {
-    username: "Anonymous",
+    username: "Savage",
     text: this.state.newComment
   };
   const data = {
